@@ -14,10 +14,10 @@ const FilteredCountries: FC<FilteredCountriesProps> = ({
       {countries.map((country, index) => (
         <div
           key={index}
-          className="cursor-pointer hover:bg-gray-200 p-2"
+          className="cursor-pointer hover:bg-gray-200 transition-colors p-2"
           onClick={() => setSelectedCountry(country)}
         >
-          {country.name.common}
+          {country.flag} {country.name.common}
         </div>
       ))}
     </div>

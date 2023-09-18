@@ -18,13 +18,17 @@ function App() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-xl mb-4">Search for a country:</h1>
-      <SearchInput search={search} setSearch={setSearch} />
+      <div className="flex flex-wrap gap-5 justify-between align-top sticky top-0 bg-white py-5">
+        <SearchInput search={search} setSearch={setSearch} />
+        <SelectedCountry country={selectedCountry} />
+      </div>
+
+      <hr className="my-10" />
+
       <FilteredCountries
         countries={filteredCountries}
         setSelectedCountry={setSelectedCountry}
       />
-      <SelectedCountry country={selectedCountry} />
     </div>
   );
 }
