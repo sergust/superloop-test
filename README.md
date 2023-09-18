@@ -1,27 +1,79 @@
-# React + TypeScript + Vite
+# Countries – Technical assessment task for Superloop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Countries is a React-based web application that allows users to search for countries and view detailed information about them. Utilising TypeScript and modern front-end development tools, the application provides an interactive and user-friendly interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for countries by name
+- View detailed information of a selected country
+- Built with TypeScript for type safety and maintainability
+- Uses the latest version of React and modern front-end tooling
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js
+- TypeScript
+- Tailwind CSS for styling
+- Vite for build and local development
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Node.js and npm must be installed on your system.
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/your-username/superloop.git
+   ```
+2. Navigate to the project directory
+   
+    ```bash
+   cd superloop
+   ```
+4. Install the dependencies
+
+    ```bash
+   npm install
+   ```
+   
+### Running the App Locally
+
+1. Start the development server
+
+    ```bash
+   npm run dev
+    ```
+
+2. Open your browser and navigate to `http://localhost:3000`
+
+
+### Build
+To build the project for production, run the following command:
+```bash
+npm run build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Linting
+To run ESLint for code quality checks, execute:
+```bash
+npm run lint
+```
+
+
+### Preview
+To preview the production build locally, use:
+```bash
+npm run preview
+```
+
+### Package.json Scripts
+- `dev`: Start Vite development server
+- `build`: Build the application for production
+- `lint`: Run ESLint for code quality checks
+- `preview`: Preview the production build locally
