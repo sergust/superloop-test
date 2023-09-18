@@ -18,17 +18,29 @@ function App() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex flex-wrap gap-5 justify-between align-top sticky top-0 bg-white py-5">
-        <SearchInput search={search} setSearch={setSearch} />
-        <SelectedCountry country={selectedCountry} />
-      </div>
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          Loading...
+        </div>
+      ) : error ? (
+        <div className="text-red-500 text-center mt-10">
+          <p>An error occurred: {error.message}</p>
+        </div>
+      ) : (
+        <>
+          <div className="flex flex-wrap gap-5 justify-between align-top sticky top-0 bg-white py-5">
+            <SearchInput search={search} setSearch={setSearch} />
+            <SelectedCountry country={selectedCountry} />
+          </div>
 
-      <hr className="my-10" />
+          <hr className="my-10" />
 
-      <FilteredCountries
-        countries={filteredCountries}
-        setSelectedCountry={setSelectedCountry}
-      />
+          <FilteredCountries
+            countries={filteredCountries}
+            setSelectedCountry={setSelectedCountry}
+          />
+        </>
+      )}
     </div>
   );
 }
